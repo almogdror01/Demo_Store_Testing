@@ -1,3 +1,5 @@
+package StorProject;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,8 +17,13 @@ import java.time.Duration;
 public class Basic
 {
     WebDriver driver;
-    HomePageElements elem;
     Actions action;
+    HeaderBarElements barElem;
+    HomePageElements homePageElem;
+    FooterElements footerElem;
+    VerifyElements verifyElem;
+    StorePageElements storePageElem;
+    CartPageElements cartPageElem;
 
     @BeforeClass
     public void openBrowser()
@@ -27,7 +34,13 @@ public class Basic
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get(getData("url",0));
-        elem = PageFactory.initElements(driver, HomePageElements.class);
+
+        homePageElem = PageFactory.initElements(driver, HomePageElements.class);
+        barElem = PageFactory.initElements(driver, HeaderBarElements.class);
+        footerElem = PageFactory.initElements(driver, FooterElements.class);
+        verifyElem = PageFactory.initElements(driver, VerifyElements.class);
+        storePageElem = PageFactory.initElements(driver, StorePageElements.class);
+        cartPageElem = PageFactory.initElements(driver, CartPageElements.class);
         action = new Actions(driver);
 
 
@@ -43,7 +56,7 @@ public class Basic
     {
         DocumentBuilder dBuilder;
         Document doc = null;
-        File fXmlFile = new File("C:\\automation\\FullStackTestAutomation\\aditStore\\TestConfig.xml");
+        File fXmlFile = new File("C:\\automation\\TestAutomation\\AtidStoreProject\\TestConfig.xml");
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         try
         {

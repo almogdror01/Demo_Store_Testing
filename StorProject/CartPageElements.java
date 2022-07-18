@@ -1,4 +1,4 @@
-public class CartPageElements
-{
+package StorProject;
 
+public class CartPageElements {
 }

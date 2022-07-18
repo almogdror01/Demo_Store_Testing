@@ -1,2 +1,5 @@
-public class FooterElements {
+package StorProject;
+
+public class FooterElements
+{
 }
