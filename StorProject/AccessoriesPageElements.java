@@ -1,5 +1,6 @@
 package StorProject;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,7 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Listeners;
 
 import java.util.List;
-@Listeners({listeners.class})
+
 public class AccessoriesPageElements extends StoreApp
 {
     Select defaultSorting;
@@ -26,11 +27,13 @@ public class AccessoriesPageElements extends StoreApp
         String s = Integer.toString(num);
         return s;
     }
-    public void selectFilterAccessories(String select, WebDriver driver) {
+    @Step ("Select Filter Accessories")
+        public void selectFilterAccessories(String select, WebDriver driver) {
         defaultSorting = new Select(driver.findElement(By.name("orderby")));
         defaultSorting.selectByVisibleText(select);
     }
 
+    @Step ("Get Result Count Accessories")
     public String getResultCountAccessories()
     {
         String arr[] = resultCountAccessories.getText().split("all ");
@@ -39,6 +42,7 @@ public class AccessoriesPageElements extends StoreApp
         return numOfResultCount;
     }
 
+    @Step ("Accessories Products Name")
     public String[] accessoriesProductsName()
     {
         String[] accessoriesProductsName= new String[txt_products.size()];
