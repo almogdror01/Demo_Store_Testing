@@ -28,6 +28,14 @@
     <BarElementTitle>About – ATID Demo Store</BarElementTitle>
     <BarElementTitle>Contact Us – ATID Demo Store</BarElementTitle>
 
+    <BarLinkName>HOME</BarLinkName>
+    <BarLinkName>STORE</BarLinkName>
+    <BarLinkName>MEN</BarLinkName>
+    <BarLinkName>WOMEN</BarLinkName>
+    <BarLinkName>ACCESSORIES</BarLinkName>
+    <BarLinkName>ABOUT</BarLinkName>
+    <BarLinkName>CONTAC US</BarLinkName>
+
 <!-- Accessories Page -->
 
     <!-- Product Name Sort By: low to hige-->
