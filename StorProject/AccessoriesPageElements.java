@@ -5,9 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Listeners;
 
 import java.util.List;
-
+@Listeners({listeners.class})
 public class AccessoriesPageElements extends StoreApp
 {
     Select defaultSorting;
@@ -28,7 +29,6 @@ public class AccessoriesPageElements extends StoreApp
     public void selectFilterAccessories(String select, WebDriver driver) throws InterruptedException {
         defaultSorting = new Select(driver.findElement(By.name("orderby")));
         defaultSorting.selectByVisibleText(select);
-        Thread.sleep(3000);
     }
 
     public String getResultCountAccessories()
@@ -36,7 +36,6 @@ public class AccessoriesPageElements extends StoreApp
         String arr[] = resultCountAccessories.getText().split("all ");
         String arr2[] = arr[1].split(" ");
         String numOfResultCount = arr2[0];
-        System.out.println(numOfResultCount);
         return numOfResultCount;
     }
 
@@ -47,7 +46,6 @@ public class AccessoriesPageElements extends StoreApp
         for (WebElement product:txt_products)
         {
             accessoriesProductsName[i] = product.getText();
-            System.out.println(accessoriesProductsName[i]+"\n");
             i++;
         }
         return accessoriesProductsName;
