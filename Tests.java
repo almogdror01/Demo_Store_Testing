@@ -16,5 +16,6 @@ public class Tests extends StoreApp {
         accessories.selectFilterAccessories(getData("SortBy",4), driver);
         verify.assertEqualsfun(accessories.getResultCountAccessories(), accessories.getResultCountAccessories());
         accessories.accessoriesProductsName();
+        verify.verifyTheMinNumOfStar(accessories.theNumberOfStar(),3);
     }
 }
