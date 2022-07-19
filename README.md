@@ -9,3 +9,4 @@ Test case 01:
 -	Make sure the product names match
 -	Make sure all products have a rating level of three stars or more
 
+![image](https://user-images.githubusercontent.com/106435061/179739780-b64e9d8c-d160-45e8-ad12-283fbe92f1eb.png)
