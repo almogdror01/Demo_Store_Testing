@@ -12,7 +12,7 @@ public class Tests extends StoreApp {
     @Description("Test Descriotion: cash 01.")
     public void test01() throws InterruptedException {
         barElem.barlinksFunctionality();
-        accessories.selectFilterAccessories("Sort by price: low to high", driver);
+        accessories.selectFilterAccessories(getData("SortBy",4), driver);
         verify.assertEqualsfun(accessories.getResultCountAccessories(), accessories.getResultCountAccessories());
         accessories.accessoriesProductsName();
     }
