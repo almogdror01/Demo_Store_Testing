@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Environment>
+    <url>https://atid.store/</url>
+
+    <!--Select Sort By:-->
+    <SortBy>Default sorting</SortBy>
+    <SortBy>Sort by popularity</SortBy>
+    <SortBy>Sort by average rating</SortBy>
+    <SortBy>Sort by latest</SortBy>
+    <SortBy>Sort by price: low to high</SortBy>
+    <SortBy>Sort by price: high to low</SortBy>
+
+
+<!-- Header Bar Links -->
+    <BarElementURL>https://atid.store/</BarElementURL>
+    <BarElementURL>https://atid.store/store/</BarElementURL>
+    <BarElementURL>https://atid.store/product-category/men/</BarElementURL>
+    <BarElementURL>https://atid.store/product-category/women/</BarElementURL>
+    <BarElementURL>https://atid.store/product-category/accessories/</BarElementURL>
+    <BarElementURL>https://atid.store/about/</BarElementURL>
+    <BarElementURL>https://atid.store/contact-us/</BarElementURL>
+
+    <BarElementTitle>ATID Demo Store – ATID College Demo Store for Practicing QA Automation</BarElementTitle>
+    <BarElementTitle>Products – ATID Demo Store</BarElementTitle>
+    <BarElementTitle>Men – ATID Demo Store</BarElementTitle>
+    <BarElementTitle>Women – ATID Demo Store</BarElementTitle>
+    <BarElementTitle>Accessories – ATID Demo Store</BarElementTitle>
+    <BarElementTitle>About – ATID Demo Store</BarElementTitle>
+    <BarElementTitle>Contact Us – ATID Demo Store</BarElementTitle>
+
+<!-- Accessories Page -->
+
+    <!-- Product Name Sort By: low to hige-->
+    <ProductName>Buddha Bracelet</ProductName>
+    <ProductName>Boho Bangle Bracelet</ProductName>
+    <ProductName>Light Brown Purse</ProductName>
+    <ProductName>Bright Gold Purse With Chain</ProductName>
+    <ProductName>Black Over-the-shoulder Handbag</ProductName>
+    <ProductName>Bright Red Bag</ProductName>
+    <ProductName>Anchor Bracelet</ProductName>
+
+
+
+</Environment>
