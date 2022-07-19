@@ -26,7 +26,7 @@ public class AccessoriesPageElements extends StoreApp
         String s = Integer.toString(num);
         return s;
     }
-    public void selectFilterAccessories(String select, WebDriver driver) throws InterruptedException {
+    public void selectFilterAccessories(String select, WebDriver driver) {
         defaultSorting = new Select(driver.findElement(By.name("orderby")));
         defaultSorting.selectByVisibleText(select);
     }
