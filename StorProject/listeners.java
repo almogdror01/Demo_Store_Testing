@@ -1,8 +1,10 @@
+package StorProject;
+
 import org.testng.ITestContext;
-import org.testng.ITestListener;
+import org.testng.ITestNGListener;
 import org.testng.ITestResult;
 
-public class listeners extends Basic implements ITestListener
+public class listeners extends StoreApp implements ITestNGListener
 {
     public void onFinish(ITestContext arg0)
     {
