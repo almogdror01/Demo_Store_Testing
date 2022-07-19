@@ -10,6 +10,14 @@
     <SortBy>Sort by price: low to high</SortBy>
     <SortBy>Sort by price: high to low</SortBy>
 
+    <!--Product Star-->
+    <Star>0</Star>
+    <Star>20</Star>
+    <Star>40</Star>
+    <Star>60</Star>
+    <Star>80</Star>
+    <Star>100</Star>
+
 
 <!-- Header Bar Links -->
     <BarElementURL>https://atid.store/</BarElementURL>
