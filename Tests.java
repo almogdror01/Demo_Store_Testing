@@ -13,7 +13,7 @@ public class Tests extends StoreApp {
     @Description("Test Descriotion: case 01.")
     public void test01() throws InterruptedException {
         barElem.chooseBarLink(getData("BarLinkName",4));
-        accessories.selectFilterAccessories(getData("SortBy",4), driver);
+        accessories.selectFilterAccessories(getData("SortBy",4));
         verify.assertEqualsfun(accessories.getResultCountAccessories(), accessories.getResultCountAccessories());
         accessories.accessoriesProductsName();
         verify.verifyTheMinNumOfStar(accessories.theNumberOfStar(),3);
