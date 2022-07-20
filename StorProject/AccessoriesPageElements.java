@@ -25,6 +25,8 @@ public class AccessoriesPageElements extends StoreApp
     @FindBy(xpath = "//ul[@class='products columns-4']/li/div[2]/div/span")
     private List<WebElement> txt_productsStars;
 
+    @FindBy(name = "orderby")
+    private WebElement btn_selectSort;
 
     public String getAccessoriesProductsNum()
     {
@@ -33,8 +35,8 @@ public class AccessoriesPageElements extends StoreApp
         return s;
     }
     @Step ("Select filter accessories.")
-        public void selectFilterAccessories(String select, WebDriver driver) {
-        defaultSorting = new Select(driver.findElement(By.name("orderby")));
+        public void selectFilterAccessories(String select) {
+        defaultSorting = new Select(btn_selectSort);
         defaultSorting.selectByVisibleText(select);
     }
 
