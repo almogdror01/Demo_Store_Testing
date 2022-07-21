@@ -19,7 +19,7 @@ public class Tests extends StoreApp {
 
     @Test(description = "Test case 01.")
     @Description("Test Descriotion: case 01.")
-    public void test01() throws InterruptedException {
+    public void test01() {
         barElem.chooseBarLink(getData("BarLinkName",4));
         accessories.selectFilterAccessories(getData("SortBy",4));
         verify.assertEqualsfun(accessories.getResultCountAccessories(), accessories.getResultCountAccessories());
