@@ -2,7 +2,7 @@
 Test automaution project on store web site https://atid.store/
 
 Test case 01:
--	Open the HOME page https://atid.store/
+-	Open HOME page
 -	Switch to the ACCESSORIES page (by clicking on the header bar)
 -	To sort from low to high
 -	Make sure there are 7 items in total
