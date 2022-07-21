@@ -17,7 +17,7 @@ import java.time.Duration;
 
 public class StoreApp
 {
-    protected WebDriver driver;
+    static WebDriver driver;
     protected Actions action;
     protected HeaderBarElements barElem;
     protected HomePageElements homePageElem;
@@ -27,15 +27,15 @@ public class StoreApp
     protected CartPageElements cartPageElem;
     protected AccessoriesPageElements accessories;
 
-    @BeforeClass
-    public void openBrowser()
+
+    public void initialize()
     {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get(getData("url",0));
+
 
         homePageElem = PageFactory.initElements(driver, HomePageElements.class);
         barElem = PageFactory.initElements(driver, HeaderBarElements.class);
@@ -72,6 +72,11 @@ public class StoreApp
         }
         doc.getDocumentElement().normalize();
         return doc.getElementsByTagName(nodeName).item(index).getTextContent();
+    }
+
+    public static WebDriver getDriver()
+    {
+        return driver;
     }
 
 }
