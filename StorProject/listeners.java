@@ -1,21 +1,19 @@
-package StorProject;
+package StoreProject;
+
 
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
-import org.testng.ITestNGListener;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class listeners extends StoreApp implements ITestNGListener
+
+public class listeners extends StoreApp implements ITestListener
 {
-  
+
     public void onTestFailure(ITestResult arg0)
     {
-        System.out.println("----------- Test " + arg0 + " Faild -----------");
-        saveScreenshot(getDriver());
-        saveLogs(arg0.getMethod().getConstructorOrMethod().getName());
+        saveScreenshot();
     }
 
 
@@ -25,12 +23,8 @@ public class listeners extends StoreApp implements ITestNGListener
     }
 
     @Attachment(value = "Page screenshot", type = "image/png")
-    public byte[] saveScreenshot(WebDriver driver) {
-        return (byte[])((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+    public byte[] saveScreenshot() {
+        return ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
-    @Attachment(value = "{0}", type = "text/plain")
-    public static String saveLogs(String message) {
-        return message;
-    }
 }

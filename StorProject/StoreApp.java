@@ -1,13 +1,13 @@
-package StorProject;
+package StoreProject;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.AfterMethod;
 import org.w3c.dom.Document;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -15,10 +15,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 import java.time.Duration;
 
+
 public class StoreApp
 {
     static WebDriver driver;
-    protected Actions action;
+    static Actions action;
     protected HeaderBarElements barElem;
     protected HomePageElements homePageElem;
     protected FooterElements footerElem;
@@ -27,7 +28,7 @@ public class StoreApp
     protected CartPageElements cartPageElem;
     protected AccessoriesPageElements accessories;
 
-
+    @Step("Initialize")
     public void initialize()
     {
         WebDriverManager.chromedriver().setup();
@@ -45,9 +46,8 @@ public class StoreApp
         cartPageElem = PageFactory.initElements(driver, CartPageElements.class);
         accessories = PageFactory.initElements(driver, AccessoriesPageElements.class);
         action = new Actions(driver);
-
-
     }
+
 
     @AfterClass
     public void closeBrowser()
@@ -55,6 +55,13 @@ public class StoreApp
         driver.quit();
     }
 
+    @AfterMethod
+    public void closeSession()
+    {
+        openHomePage();
+    }
+
+    @Step
     public String getData (String nodeName, int index)
     {
         DocumentBuilder dBuilder;
@@ -79,4 +86,8 @@ public class StoreApp
         return driver;
     }
 
+    public void openHomePage()
+    {
+        getDriver().get(getData("url", 0));
+    }
 }

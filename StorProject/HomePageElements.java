@@ -1,4 +1,4 @@
-package StorProject;
+package StoreProject;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,6 +17,9 @@ public class HomePageElements
     @FindBy (className = "eicon-chevron-right")
     private WebElement arrow_right;
 
-
+    public void clickOnShopNow()
+    {
+        btn_shopNow.click();
+    }
 
 }
