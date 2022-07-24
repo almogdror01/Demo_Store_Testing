@@ -21,6 +21,7 @@ Test case 02:
 - Enter a coupon name ""
 - Click on the APPLY COUPON button
 - Verify the price has dropped
+- 
 ![image](https://user-images.githubusercontent.com/106435061/180665629-fa940ac8-5184-48dd-8805-00c04d2a75d5.png)
 
 ![test02_pic](https://user-images.githubusercontent.com/106435061/180665645-b6d70e3e-9140-4eea-99ca-67281fdf535a.JPG)
