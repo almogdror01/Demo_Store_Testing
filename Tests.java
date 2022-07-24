@@ -1,20 +1,17 @@
-import StorProject.HeaderBarElements;
-import StorProject.StoreApp;
-import StorProject.listeners;
+import StoreProject.StoreApp;
 import io.qameta.allure.Description;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-@Listeners({listeners.class})
 
+@Listeners(StoreProject.listeners.class)
 public class Tests extends StoreApp {
 
     @BeforeClass
-    public void openBrowser()
-    {
+    public void openBrowser() {
         initialize();
-        getDriver().get(getData("url",0));
+        openHomePage();
     }
 
     @Test(description = "Test case 01.")
@@ -22,8 +19,22 @@ public class Tests extends StoreApp {
     public void test01() {
         barElem.chooseBarLink(getData("BarLinkName",4));
         accessories.selectFilterAccessories(getData("SortBy",4));
-        verify.assertEqualsfun(accessories.getResultCountAccessories(), accessories.getResultCountAccessories());
+        accessories.verifyTheTotalNumOfItems();
         accessories.accessoriesProductsName();
         verify.verifyTheMinNumOfStar(accessories.theNumberOfStar(),3);
     }
+
+    @Test(description = "Test case 02.")
+    @Description("Test Descriotion: case 02.")
+    public void test02() {
+        homePageElem.clickOnShopNow();
+        storePageElem.sliderFilter(50,90);
+        storePageElem.pickFirstProduct();
+        storePageElem.addToCart();
+        storePageElem.viewCartAfter_AddToCart();
+        cartPageElem.addCoupon("example");
+        cartPageElem.confirmCoupon("example");
+    }
+
+
 }
