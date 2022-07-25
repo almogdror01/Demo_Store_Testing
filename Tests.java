@@ -1,11 +1,15 @@
-import StoreProject.StoreApp;
+package org.StoreProject;
+
+import org.StoreProject.StoreApp;
 import io.qameta.allure.Description;
+import org.StoreProject.listeners;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 
-@Listeners(StoreProject.listeners.class)
+@Listeners(listeners.class)
 public class Tests extends StoreApp {
 
     @BeforeClass
@@ -26,14 +30,15 @@ public class Tests extends StoreApp {
 
     @Test(description = "Test case 02.")
     @Description("Test Description: case 02.")
-    public void test02() {
+    @Parameters({"startingPrice", "finalPrice","couponName"})
+    public void test02(int startingPrice, int finalPrice, String couponName) {
         homePageElem.clickOnShopNow();
-        storePageElem.sliderFilter(50,90);
+        storePageElem.sliderFilter(startingPrice,finalPrice);
         storePageElem.pickFirstProduct();
         storePageElem.addToCart();
         storePageElem.viewCartAfter_AddToCart();
-        cartPageElem.addCoupon("example");
-        cartPageElem.confirmCoupon("example");
+        cartPageElem.addCoupon(couponName);
+        cartPageElem.confirmCoupon(couponName);
     }
 
 
