@@ -14,9 +14,4 @@ public class VerifyElements extends StoreApp
 
     }
 
-
-
-
-
-
 }
