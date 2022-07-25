@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Reading details from testNG xml">
+    <test name="Reading details from testNG xml">
+        <parameter name="startingPrice" value="50"></parameter>
+        <parameter name="finalPrice" value="90"></parameter>
+        <parameter name="couponName" value="example"></parameter>
+        <classes>
+            <class name="org.StoreProject.Tests"></class>
+        </classes>
+    </test>
+</suite>
