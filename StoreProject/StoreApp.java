@@ -55,7 +55,7 @@ public class StoreApp
         driver.quit();
     }
 
-    @AfterMethod
+    @AfterTest
     public void closeSession()
     {
         openHomePage();
