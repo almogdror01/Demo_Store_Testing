@@ -1,6 +1,8 @@
 package StoreProject;
 
 import io.qameta.allure.Step;
+import org.testng.Assert;
+
 import static org.testng.Assert.*;
 
 public class VerifyElements extends StoreApp
@@ -9,9 +11,14 @@ public class VerifyElements extends StoreApp
     public void verifyTheMinNumOfStar(double [] arr, int num)
     {
         for (int i = 0; i < arr.length; i++) {
-            assertTrue(arr[i] >= Integer.parseInt(getData("Star",num)));
+            Assert.assertTrue(arr[i] >= Integer.parseInt(getData("Star",num)));
         }
 
     }
+
+
+
+
+
 
 }

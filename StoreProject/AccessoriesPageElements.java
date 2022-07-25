@@ -4,10 +4,10 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import java.util.List;
 
-import static org.testng.Assert.assertEquals;
 
 public class AccessoriesPageElements extends StoreApp
 {
@@ -77,8 +77,7 @@ public class AccessoriesPageElements extends StoreApp
     @Step("Verify the total number of items.")
     public void verifyTheTotalNumOfItems()
     {
-        String expectedNumOfItems = "7";
-        assertEquals(getResultsNumAccessories(),expectedNumOfItems);
+        Assert.assertEquals(getResultsNumAccessories(),getData("expectedNumOfItems",0));
     }
 
 
