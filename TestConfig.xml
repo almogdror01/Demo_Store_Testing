@@ -55,6 +55,7 @@
     <ProductName>Bright Red Bag</ProductName>
     <ProductName>Anchor Bracelet</ProductName>
 
-
+    <!--The expected number of products-->
+    <expectedNumOfItems>7</expectedNumOfItems>
 
 </Environment>
