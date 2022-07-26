@@ -9,7 +9,7 @@ Test case 01:
 -	Make sure the product names match
 -	Make sure all products have a rating level of 3 stars or more
 
-![image](https://user-images.githubusercontent.com/106435061/180665277-e2fb3baf-36c3-4cce-af69-f56c19274c38.png)
+![image](https://user-images.githubusercontent.com/106435061/181029425-6072f493-32be-4155-9140-8db6811f11fb.png)
 
 Test case 02:
 -	Open HOME page
@@ -26,4 +26,4 @@ Test case 02:
 
 ![image](https://user-images.githubusercontent.com/106435061/181028270-7b451119-7c12-4f99-a704-fff6f339984d.png)
 
-http://192.168.56.1:64796/index.html#suites/8cd3c24963736707b02a80bfaacb3fc7/ec51b90de71b6bf7/
+
