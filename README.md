@@ -26,3 +26,4 @@ Test case 02:
 
 ![test02_pic](https://user-images.githubusercontent.com/106435061/180665645-b6d70e3e-9140-4eea-99ca-67281fdf535a.JPG)
 
+http://192.168.56.1:64796/index.html#suites/8cd3c24963736707b02a80bfaacb3fc7/ec51b90de71b6bf7/
