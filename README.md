@@ -24,6 +24,6 @@ Test case 02:
  
 ![image](https://user-images.githubusercontent.com/106435061/180665629-fa940ac8-5184-48dd-8805-00c04d2a75d5.png)
 
-![test02_pic](https://user-images.githubusercontent.com/106435061/180665645-b6d70e3e-9140-4eea-99ca-67281fdf535a.JPG)
+![image](https://user-images.githubusercontent.com/106435061/181028270-7b451119-7c12-4f99-a704-fff6f339984d.png)
 
 http://192.168.56.1:64796/index.html#suites/8cd3c24963736707b02a80bfaacb3fc7/ec51b90de71b6bf7/
